@@ -133,5 +133,11 @@ Correção ao salvar a quantidade de inimigos no navegador.
 
 `fix: quantidade de inimigos`
 
+#### 21. Muda o cenário
+
+Atualiza o cenário conforme avança de nível.
+
+`feat: cenário`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
