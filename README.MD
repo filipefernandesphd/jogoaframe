@@ -19,5 +19,17 @@ Projétil criado estaticamente e captura do click na cena.
 
 `feat: projetil criado estaticamente`
 
+#### 4. Criação do componente do projétil
+
+Componente do projétil criado.
+
+`feat: componente shooting criado`
+
+#### 5. Projétil criado com o click
+
+Projétil criado dinamicamente por meio do evento de click
+
+`feat: projetil criado com click`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
