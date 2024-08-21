@@ -1,3 +1,16 @@
+// registering an entity
+AFRAME.registerPrimitive('a-score-board',{
+    // Attaches components by default.
+    defaultComponents:{
+        'score-board':{}
+    },
+
+    // Maps HTML attributes to the component's properties.
+    mappings:{
+        position: 'score-board.position'
+    }
+});
+
 // registering a component
 AFRAME.registerComponent('score-board', {
     schema:{

@@ -27,7 +27,7 @@ Componente do projétil criado.
 
 #### 5. Projétil criado com o click
 
-Projétil criado dinamicamente por meio do evento de click
+Projétil criado dinamicamente por meio do evento de click.
 
 `feat: projetil criado com click`
 
@@ -69,21 +69,27 @@ Alteração aleatória do formato dos inimigos.
 
 #### 12. Implementação estática do placar
 
-Implementação estática do placar de inimigos atingidos
+Implementação estática do placar de inimigos atingidos.
 
 `feat: implementacao estatica do placar`
 
 #### 13. Atualização do placar
 
-Atualização do placar conforme os inimigos são eliminados
+Atualização do placar conforme os inimigos são eliminados.
 
 `feat: atualização do placar`
 
 #### 14. Criação do componente do placar
 
-Criação do componente do placar
+Criação do componente do placar.
 
 `feat: componente scoreboard`
+
+#### 15. Criação da entidade do placar
+
+Criação da entidade do placar com o `registerPrimitive`.
+
+`feat: entidade scoreboard`
 
 
 ## Desenvolvido por
