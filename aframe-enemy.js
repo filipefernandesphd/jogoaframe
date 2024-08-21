@@ -68,8 +68,11 @@ AFRAME.registerComponent('enemy-element', {
 
         const distance = camPostion.distanceTo(elPosition);
         if (distance  < this.data.distance +0.2){
-          console.log("GAME OVER");
-          this.el.sceneEl.pause();
+            this.gameOver();
         } 
+    },
+
+    gameOver: function(){
+        this.el.sceneEl.setAttribute('game','gameover:true');
     }
 })

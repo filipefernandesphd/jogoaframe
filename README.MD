@@ -91,6 +91,11 @@ Criação da entidade do placar com o `registerPrimitive`.
 
 `feat: entidade scoreboard`
 
+#### 16. Criação do componente game e implementação do game over
+
+Criação do componente game e implementação do game over.
+
+`feat: componente game e funcao gameover`
 
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

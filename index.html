@@ -15,12 +15,13 @@
     <script src="https://unpkg.com/aframe-randomizer-components@3.0.2/dist/aframe-randomizer-components.min.js"></script>
 
     <!-- MEU SCRIPTS -->
+    <script src="aframe-game.js"></script>
     <script src="aframe-enemy.js"></script>
     <script src="aframe-shooting.js"></script>
     <script src="aframe-scoreboard.js"></script>
 </head>
 <body>
-    <a-scene physics>
+    <a-scene physics game>
         <a-camera shooting="score: #textscore" position="0 1.5 5">
             <a-cursor></a-cursor>
             <a-score-board></a-score-board>
