@@ -1,5 +1,10 @@
 const minEnemies = 3; // mínimo de inimigos
 
+const scene = document.querySelector('a-scene');
+scene.setAttribute('game', {
+    minenimies: minEnemies
+});
+
 function nextlevel(){
     let enemies = JSON.parse(localStorage.getItem('enemies')); 
 

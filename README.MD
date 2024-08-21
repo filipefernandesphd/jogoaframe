@@ -117,9 +117,15 @@ Muda a quantidade de inimigos conforme avança o nível.
 
 #### 20. Game over
 
-Mostra a mensagem de game over e permiti jogar novamente.
+Mostra a mensagem de game over e permite jogar novamente.
 
 `feat: gameover`
+
+##### 20.1 Atualização do game over
+
+Acréscimo da função de game over
+
+`feat: gameover atualizado`
 
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
