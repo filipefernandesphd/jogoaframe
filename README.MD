@@ -127,5 +127,11 @@ Acréscimo da função de game over
 
 `feat: gameover atualizado`
 
+##### 20.2 Correção da persistência dos dados
+
+Correção ao salvar a quantidade de inimigos no navegador.
+
+`fix: quantidade de inimigos`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
