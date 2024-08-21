@@ -13,5 +13,11 @@ Inimigo criado estaticamente.
 
 `feat: inimigo criado estaticamente`
 
+#### 3. Criação do projétil
+
+Projétil criado estaticamente e captura do click na cena.
+
+`feat: projetil criado estaticamente`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

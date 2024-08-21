@@ -11,6 +11,14 @@
     <a-scene>
         <a-camera position="0 1.5 5"></a-camera>
         <a-box color="black"></a-box>
+        <a-sphere scale=".2 .2 .2" color="black" position="0 1 0"></a-sphere>
     </a-scene>
 </body>
 </html>
+<script>
+    // Captura o evento de click na cena
+    const scene = document.getElementsByTagName('a-scene')[0];
+    scene.addEventListener('click' , function(){
+        console.log('Cena clicada');
+    });
+</script>
