@@ -43,5 +43,11 @@ Colisão do projétil com os inimigos.
 
 `feat: colisao do projetil`
 
+#### 8. Criação dos inimigos dinamicamente
+
+Criação dinâmica dos inimigos por meio do seu componente.
+
+`feat: componente enemy criado`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

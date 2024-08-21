@@ -2,20 +2,26 @@ AFRAME.registerComponent('shooting', {
     init: function(){
         var self = this; //garante acessar o elemento indepentente do nível de escopo do JS
 
-        this.getRemoveEnemies();
         this.shooting();
+        this.getRemoveEnemies();
+    },
+
+    tick: function(){
+        
     },
 
     getRemoveEnemies: function(){
-        // seleciona os objetos que serão colididos e removidos da cena
-        let collidables = document.getElementsByClassName('collidable');
+        setTimeout(function(){ // O setTimeout foi usado para que o collidables pudesse pegar todos os objetos .collidable criados dinamicamente
+            // seleciona os objetos que serão colididos e removidos da cena
+            let collidables = document.querySelectorAll('.collidable');
 
-        for(let enemy of collidables){
-            // adiciona o evento de raycaster-intersected em cada objeto
-            enemy.addEventListener('raycaster-intersected', function(e){
-                console.log('Colisão detectada');
-            });
-        }
+            for(let enemy of collidables){
+                // adiciona o evento de raycaster-intersected em cada objeto
+                enemy.addEventListener('raycaster-intersected', function(e){
+                    console.log('Colisão detectada');
+                });
+            }
+        },100);
     },
 
     // função que identifica a ação de click na cena
