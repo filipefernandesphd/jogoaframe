@@ -79,6 +79,12 @@ Atualização do placar conforme os inimigos são eliminados
 
 `feat: atualização do placar`
 
+#### 14. Criação do componente do placar
+
+Criação do componente do placar
+
+`feat: componente scoreboard`
+
 
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
