@@ -31,5 +31,11 @@ Projétil criado dinamicamente por meio do evento de click
 
 `feat: projetil criado com click`
 
+#### 6. Trajeto do projétil
+
+Implementação do trajeto do projétil.
+
+`feat: trajeto do projetil`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
