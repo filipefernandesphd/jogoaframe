@@ -20,13 +20,12 @@
 </head>
 <body>
     <a-scene physics>
-        <a-camera shooting position="0 1.5 5">
+        <a-camera shooting="score: #textscore" position="0 1.5 5">
             <a-cursor></a-cursor>
-            <a-text value="0 / 3" widht="8" color="white" align="center" position="0 2.05 -2.9"></a-text>
+            <a-text id="textscore" value="0 / 3" widht="8" color="white" align="center" position="0 2.05 -2.9"></a-text>
             <a-plane color="black" width="1.3" height=".5" position="0 2.1 -3"></a-plane>
         </a-camera>
-        <a-box color="red"></a-box> <!-- Somente para testar o posicionamento do placar -->
-        <!-- <a-entity enemy="amount: 5"></a-entity> -->
+        <a-entity enemy="amount: 3"></a-entity>
     </a-scene>
 </body>
 </html>

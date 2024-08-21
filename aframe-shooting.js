@@ -1,12 +1,24 @@
 AFRAME.registerComponent('shooting', {
+    schema: {
+        score: {type:'selector'},
+        total: {type:'number', default:3}
+    },
+    
     init: function(){
         var self = this; //garante acessar o elemento indepentente do nível de escopo do JS
 
         this.shooting();
         this.getRemoveEnemies();
+
+        // console.log(this.data.score);
     },
 
     getRemoveEnemies: function(){
+        let countScore = 0;
+        let score = this.data.score;
+        let total = this.data.total; // total de inimigos no nivel do jogo
+        let scene = this.el.sceneEl;
+        
         setTimeout(function(){ // O setTimeout foi usado para que o collidables pudesse pegar todos os objetos .collidable criados dinamicamente
             // seleciona os objetos que serão colididos e removidos da cena
             let collidables = document.querySelectorAll('.collidable');
@@ -14,7 +26,19 @@ AFRAME.registerComponent('shooting', {
             for(let enemy of collidables){
                 // adiciona o evento de raycaster-intersected em cada objeto
                 enemy.addEventListener('raycaster-intersected', function(e){
-                    console.log('Colisão detectada');
+                    // identifica quem encostou no objeto
+                    let objectTouched = e.detail.el;
+
+                    // caso seja a bala, será removido
+                    if(objectTouched.className === 'bullet'){
+                        this.remove();
+                        score.setAttribute('value',`${++countScore} / 3`);
+
+                        if(total == countScore){
+                            console.log('YOY WON!!!');
+                            scene.pause();
+                        }
+                    }  
                 });
             }
         },100);
@@ -48,6 +72,7 @@ AFRAME.registerComponent('shooting', {
     createShooting: function(position, direction, speed){
         let bullet = document.createElement('a-sphere');
 
+        bullet.classList.add('bullet');
         bullet.setAttribute('scale','.2 .2 .2'); 
         bullet.setAttribute('color','black'); 
         bullet.setAttribute('raycaster','objects: .collidable');

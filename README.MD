@@ -73,6 +73,12 @@ Implementação estática do placar de inimigos atingidos
 
 `feat: implementacao estatica do placar`
 
+#### 13. Atualização do placar
+
+Atualização do placar conforme os inimigos são eliminados
+
+`feat: atualização do placar`
+
 
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
