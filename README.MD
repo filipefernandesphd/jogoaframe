@@ -61,5 +61,12 @@ Movimentar os inimigos conforme a posição da câmera.
 
 `feat: movimentacao dos inimigos`
 
+##### 11. Alteração dos formatos dos inimigos
+
+Alteração aleatória do formato dos inimigos.
+
+`feat: formato dos inimigos`
+
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

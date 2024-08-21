@@ -9,7 +9,7 @@ AFRAME.registerComponent('enemy',{
 
     create_enemies: function(){
         for(let i=1; i<=this.data.amount; i++){
-            let enemy = document.createElement('a-box');
+            let enemy = document.createElement(this.random_primitive());
             enemy.classList.add('collidable');  
             enemy.setAttribute('enemy-element','');
             enemy.setAttribute('dynamic-body','');
@@ -19,10 +19,19 @@ AFRAME.registerComponent('enemy',{
             }
             );
             enemy.setAttribute('random-color','');
+            enemy.setAttribute('random-scale','');
+            enemy.setAttribute('random-rotation','');
 
             this.el.sceneEl.append(enemy);
         }
     },
+
+    // retorna um formato diferente para o inimigo
+    random_primitive: function(){
+        const elements = ['a-box', 'a-cone', 'a-cylinder', 'a-sphere'];
+        const randomIndex = Math.floor(Math.random() * elements.length);
+        return elements[randomIndex];
+      },
 
     // função que retorna um número aleatório
     getRandomNumber: function(min, max, decimalPlaces = 0) {
