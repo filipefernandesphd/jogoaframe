@@ -32,7 +32,7 @@ AFRAME.registerComponent('shooting', {
                     // caso seja a bala, será removido
                     if(objectTouched.className === 'bullet'){
                         this.remove();
-                        score.setAttribute('value',`${++countScore} / 3`);
+                        score.setAttribute('value',`${++countScore} / ${total}`);
 
                         if(total == countScore){
                             scene.setAttribute('game', 'winner:true');

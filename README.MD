@@ -109,5 +109,12 @@ Mostrar mensagem para mudar de nível quando eliminar os inimigos.
 
 `feat: mensagem para mudar de nivel`
 
+#### 19. Muda nível e quantidade de inimigos
+
+Muda a quantidade de inimigos conforme avança o nível.
+
+`feat: avanca de nivel`
+
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

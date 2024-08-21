@@ -14,7 +14,8 @@ AFRAME.registerPrimitive('a-score-board',{
 // registering a component
 AFRAME.registerComponent('score-board', {
     schema:{
-        position: {type:'vec3', default:'0 2.1 -3'}
+        position: {type:'vec3', default:'0 2.1 -3'},
+        totalEnemies: {type:'number'}
     },
 
     init: function(){    
@@ -45,7 +46,7 @@ AFRAME.registerComponent('score-board', {
         let text = document.createElement('a-text');
 
         text.setAttribute('id','textscore');
-        text.setAttribute('value',`0 / 3`);
+        text.setAttribute('value',`0 / ${this.data.totalEnemies}`);
         text.setAttribute('width','8');
         text.setAttribute('color','white');
         text.setAttribute('align','center');
