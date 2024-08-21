@@ -97,5 +97,11 @@ Criação do componente game e implementação do game over.
 
 `feat: componente game e funcao gameover`
 
+#### 17. Implementação da função winner
+
+Implementação da função winner quando o jogador elimina todos os inimigos. 
+
+`feat: funcao winner`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

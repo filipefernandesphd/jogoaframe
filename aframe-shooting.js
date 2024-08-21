@@ -35,8 +35,7 @@ AFRAME.registerComponent('shooting', {
                         score.setAttribute('value',`${++countScore} / 3`);
 
                         if(total == countScore){
-                            console.log('YOY WON!!!');
-                            scene.pause();
+                            scene.setAttribute('game', 'winner:true');
                         }
                     }  
                 });
