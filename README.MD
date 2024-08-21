@@ -103,5 +103,11 @@ Implementação da função winner quando o jogador elimina todos os inimigos.
 
 `feat: funcao winner`
 
+#### 18. Mensagem para mudar de nível
+
+Mostrar mensagem para mudar de nível quando eliminar os inimigos.
+
+`feat: mensagem para mudar de nivel`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

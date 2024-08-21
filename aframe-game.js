@@ -19,6 +19,9 @@ AFRAME.registerSystem('game',{
     },
 
     winner: function(){
+        var overlay = document.getElementById('msgwinner');
+        overlay.style.display = 'flex';
+
         console.log('YOU WON');
     },
 

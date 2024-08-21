@@ -19,14 +19,23 @@
     <script src="aframe-enemy.js"></script>
     <script src="aframe-shooting.js"></script>
     <script src="aframe-scoreboard.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <!-- Mensagem quando ganha -->
+    <div id="msgwinner" class="overlay winner">
+        <b>PARABÉNS!</b>
+        <button onclick="nextlevel()">Continuar jogando!</button>
+    </div>
+
     <a-scene physics game>
         <a-camera shooting="score: #textscore" position="0 1.5 5">
             <a-cursor></a-cursor>
             <a-score-board></a-score-board>
         </a-camera>
-        <a-entity enemy="amount: 3"></a-entity>
+        <a-entity id="enemy" enemy="amount: 3"></a-entity>
     </a-scene>
 </body>
 </html>
+<script src="script.js"></script>

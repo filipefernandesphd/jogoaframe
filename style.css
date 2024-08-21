@@ -1,0 +1,31 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Alinha os elementos verticalmente */
+    z-index: 999; /* Fica acima de todos os outros elementos */
+    color: white;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    display: none; /* Inicialmente escondido */
+}
+
+.overlay button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 0.5em;
+    cursor: pointer;
+}
+
+.winner{
+  background-color: rgba(0, 0, 0, 0.8); /* Cor preta com opacidade */  
+}
+
+.gameover{
+  background-color: rgba(163, 11, 27, 0.7); /* Cor preta com opacidade */  
+}
