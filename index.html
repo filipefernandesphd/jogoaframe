@@ -29,6 +29,12 @@
         <button onclick="nextlevel()">Continuar jogando!</button>
     </div>
 
+    <!-- Mensagem quando perde -->
+    <div id="msggameover" class="overlay gameover">
+        <b>GAME OVER!</b>
+        <button onclick="restartgame()">Reiniciar jogo</button>
+    </div> 
+
     <a-scene physics game>
         <a-camera shooting="score: #textscore" position="0 1.5 5">
             <a-cursor></a-cursor>

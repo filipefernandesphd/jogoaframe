@@ -1,3 +1,5 @@
+const minEnemies = 3; // mínimo de inimigos
+
 function nextlevel(){
     let enemies = JSON.parse(localStorage.getItem('enemies')); 
 
@@ -14,5 +16,10 @@ function nextlevel(){
 function salvaDadosEatualiza(enemies) {
     let newEnemies = enemies + (Math.floor(enemies / 2));
     localStorage.setItem('enemies', JSON.stringify(newEnemies));
+    window.location.reload(); 
+}
+
+function restartgame(){    
+    localStorage.setItem('enemies', JSON.stringify(minEnemies));
     window.location.reload(); 
 }

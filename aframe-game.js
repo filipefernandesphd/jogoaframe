@@ -52,6 +52,9 @@ AFRAME.registerSystem('game',{
     },
 
     gameOver: function(){
+        var overlay = document.getElementById('msggameover');
+        overlay.style.display = 'flex';
+
         console.log('GAME OVER');
     }
 });

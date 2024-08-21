@@ -115,6 +115,11 @@ Muda a quantidade de inimigos conforme avança o nível.
 
 `feat: avanca de nivel`
 
+#### 20. Game over
+
+Mostra a mensagem de game over e permiti jogar novamente.
+
+`feat: gameover`
 
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
