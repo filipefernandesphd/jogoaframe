@@ -49,5 +49,11 @@ Criação dinâmica dos inimigos por meio do seu componente.
 
 `feat: componente enemy criado`
 
+#### 9. Instanciação dos inimigos dinamicamente
+
+Atualizar o componente enemy para criar os inimigos dinamicamente.
+
+`feat: componente enemy atualizado para criar os inimigos dinamicamente`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
