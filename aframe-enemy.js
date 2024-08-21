@@ -9,18 +9,18 @@ AFRAME.registerComponent('enemy',{
 
     create_enemies: function(){
         for(let i=1; i<=this.data.amount; i++){
-            let emeny = document.createElement('a-box');
-            emeny.classList.add('collidable');  
-            // emeny.setAttribute('dynamic-body','');
-            // enemy.setAttribute('static-body','');
-            emeny.setAttribute('random-position',{
+            let enemy = document.createElement('a-box');
+            enemy.classList.add('collidable');  
+            enemy.setAttribute('enemy-element','');
+            enemy.setAttribute('dynamic-body','');
+            enemy.setAttribute('random-position',{
                 min: `${this.getRandomNumber(-2, 0, 2)} ${this.getRandomNumber(.5, 1, 2)} ${this.getRandomNumber(0, 0, 2)}`,
                 max: `${this.getRandomNumber(0, 2, 2)} ${this.getRandomNumber(.5, 5, 2)} ${this.getRandomNumber(0, -5, 2)}`
             }
             );
-            emeny.setAttribute('random-color','');
+            enemy.setAttribute('random-color','');
 
-            this.el.sceneEl.append(emeny);
+            this.el.sceneEl.append(enemy);
         }
     },
 
@@ -31,3 +31,36 @@ AFRAME.registerComponent('enemy',{
         return Math.round(randomNum * factor) / factor;
     }
 });
+
+AFRAME.registerComponent('enemy-element', {
+    schema: {
+        distance: {type: 'number', default: 1}
+    },
+
+    tick: function (time, timeDelta) {
+        // console.log(timeDelta);
+
+        //Obter camera
+        const camera = document.querySelector('[camera]');
+        const camPostion = camera.object3D.position.clone();
+
+        //Obter posicao do elemento
+        const elPosition = this.el.object3D.position;
+
+        const targetPostion = new THREE.Vector3(camPostion.x , camPostion.y, camPostion.z);
+        
+        //Direção do Movimento
+        const direction = new THREE.Vector3().subVectors(targetPostion,elPosition).normalize();
+        const velocity = direction.multiplyScalar(5);
+
+        if(this.el.body){
+          this.el.body.velocity.set(velocity.x,velocity.y,velocity.z);
+        }
+
+        const distance = camPostion.distanceTo(elPosition);
+        if (distance  < this.data.distance +0.2){
+          console.log("GAME OVER");
+          this.el.sceneEl.pause();
+        } 
+    }
+})

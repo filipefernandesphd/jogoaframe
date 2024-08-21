@@ -6,10 +6,6 @@ AFRAME.registerComponent('shooting', {
         this.getRemoveEnemies();
     },
 
-    tick: function(){
-        
-    },
-
     getRemoveEnemies: function(){
         setTimeout(function(){ // O setTimeout foi usado para que o collidables pudesse pegar todos os objetos .collidable criados dinamicamente
             // seleciona os objetos que serão colididos e removidos da cena
@@ -73,3 +69,4 @@ AFRAME.registerComponent('shooting', {
         return Math.round(randomNum * factor) / factor;
     }
 });
+

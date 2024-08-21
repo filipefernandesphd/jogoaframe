@@ -55,5 +55,11 @@ Atualizar o componente enemy para criar os inimigos dinamicamente.
 
 `feat: componente enemy atualizado para criar os inimigos dinamicamente`
 
+#### 10. Movimentação dos inimigos
+
+Movimentar os inimigos conforme a posição da câmera.
+
+`feat: movimentacao dos inimigos`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
