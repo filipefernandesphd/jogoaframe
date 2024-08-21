@@ -2,7 +2,20 @@ AFRAME.registerComponent('shooting', {
     init: function(){
         var self = this; //garante acessar o elemento indepentente do nível de escopo do JS
 
+        this.getRemoveEnemies();
         this.shooting();
+    },
+
+    getRemoveEnemies: function(){
+        // seleciona os objetos que serão colididos e removidos da cena
+        let collidables = document.getElementsByClassName('collidable');
+
+        for(let enemy of collidables){
+            // adiciona o evento de raycaster-intersected em cada objeto
+            enemy.addEventListener('raycaster-intersected', function(e){
+                console.log('Colisão detectada');
+            });
+        }
     },
 
     // função que identifica a ação de click na cena
@@ -35,6 +48,7 @@ AFRAME.registerComponent('shooting', {
 
         bullet.setAttribute('scale','.2 .2 .2'); 
         bullet.setAttribute('color','black'); 
+        bullet.setAttribute('raycaster','objects: .collidable');
         bullet.setAttribute('animation', {
             property: 'position',
             from: position,

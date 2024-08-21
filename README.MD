@@ -37,5 +37,11 @@ Implementação do trajeto do projétil.
 
 `feat: trajeto do projetil`
 
+#### 7. Colisão do projétil com os inimigos
+
+Colisão do projétil com os inimigos.
+
+`feat: colisao do projetil`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
