@@ -157,6 +157,5 @@ Organização dos arquivos.
 
 `feat: organizacao dos arquivos`
 
-
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
