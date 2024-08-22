@@ -145,5 +145,11 @@ Inserir sons no jogo.
 
 `feat: sons`
 
+#### 23. Finalização
+
+Acréscimo do efeito de confete, ajuste da amplitudade da posição dos inimigos e bloqueio do ponteiro do mouse.
+
+`feat: finalizacao`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)

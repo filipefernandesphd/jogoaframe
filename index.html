@@ -23,6 +23,9 @@
     <script src="aframe-shooting.js"></script>
     <script src="aframe-scoreboard.js"></script>
 
+    <!-- confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -55,7 +58,7 @@
             <audio id="destroyed" src="sounds/destroyed.mp3" preload="auto"></audio>
         </a-assets>
 
-        <a-camera shooting="score: #textscore; sound: #laser" position="0 1.5 5">
+        <a-camera shooting="score: #textscore; sound: #laser" position="0 1.5 5" look-controls="pointerLockEnabled: true">
             <a-cursor></a-cursor>
             <a-score-board id="scoreboard"></a-score-board>
         </a-camera>

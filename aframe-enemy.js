@@ -19,9 +19,9 @@ AFRAME.registerComponent('enemy',{
             enemy.setAttribute('enemy-element','');
             enemy.setAttribute('dynamic-body','');
             enemy.setAttribute('random-position',{
-                min: `${this.getRandomNumber(-2, 0, 2)} ${this.getRandomNumber(.5, 1, 2)} ${this.getRandomNumber(0, 0, 2)}`,
-                max: `${this.getRandomNumber(0, 2, 2)} ${this.getRandomNumber(.5, 5, 2)} ${this.getRandomNumber(0, -5, 2)}`
-            }
+                min: `${this.getRandomNumber(-50, -10, 2)} ${this.getRandomNumber(.5, 3, 2)} ${this.getRandomNumber(5, -10, 2)}`,
+                max: `${this.getRandomNumber(50, 10, 2)} ${this.getRandomNumber(.5, 50, 2)} ${this.getRandomNumber(5, -50, 2)}`
+              }
             );
             enemy.setAttribute('random-color','');
             enemy.setAttribute('random-scale','');
