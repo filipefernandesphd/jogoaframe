@@ -1,6 +1,7 @@
 AFRAME.registerComponent('enemy',{
     schema: {
-        amount: {'type': 'number', default: 3} //ex. no html enemy="amount:3"
+        amount: {'type': 'number', default: 3}, //ex. no html enemy="amount:3"
+        sounddestroyed: {'type': 'string'}
     },
 
     init: function() {
@@ -10,6 +11,10 @@ AFRAME.registerComponent('enemy',{
     create_enemies: function(){
         for(let i=1; i<=this.data.amount; i++){
             let enemy = document.createElement(this.random_primitive());
+            
+            enemy.setAttribute('enemy-element',{
+                sounddestroyed: this.data.sounddestroyed
+            }); 
             enemy.classList.add('collidable');  
             enemy.setAttribute('enemy-element','');
             enemy.setAttribute('dynamic-body','');
@@ -43,7 +48,8 @@ AFRAME.registerComponent('enemy',{
 
 AFRAME.registerComponent('enemy-element', {
     schema: {
-        distance: {type: 'number', default: 1}
+        distance: {type: 'number', default: 1},
+        sounddestroyed: {type: 'string'}
     },
 
     tick: function (time, timeDelta) {
@@ -70,6 +76,15 @@ AFRAME.registerComponent('enemy-element', {
         if (distance  < this.data.distance +0.2){
             this.gameOver();
         } 
+    },
+
+    remove: function(){
+        this.el.setAttribute('sound', {
+            src: this.data.sounddestroyed,
+            autoplay: true,
+            positional: false,
+            volume: .5            
+        });    
     },
 
     gameOver: function(){

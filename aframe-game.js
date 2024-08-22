@@ -48,13 +48,15 @@ AFRAME.registerSystem('game',{
         var overlay = document.getElementById('msgwinner');
         overlay.style.display = 'flex';
 
-        console.log('YOU WON');
+        const audio = document.getElementById('sound_gamewinner');
+        audio.play();
     },
 
     gameOver: function(){
         var overlay = document.getElementById('msggameover');
         overlay.style.display = 'flex';
 
-        console.log('GAME OVER');
+        const audio = document.getElementById('sound_gameover');
+        audio.play();
     }
 });

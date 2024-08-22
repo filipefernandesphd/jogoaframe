@@ -38,13 +38,29 @@
         <button onclick="restartgame()">Reiniciar jogo</button>
     </div> 
 
+    <!-- Áudio quando ganha -->
+    <audio id="sound_gamewinner" preload="auto">
+        <source src="sounds/gamewinner.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Áudio quando perde -->
+    <audio id="sound_gameover" preload="auto">
+        <source src="sounds/gameover.mp3" type="audio/mpeg">
+    </audio>
+
     <a-scene physics game>
-        <a-camera shooting="score: #textscore" position="0 1.5 5">
+        <a-assets>
+            <audio id="laser" src="sounds/laser.mp3"></audio>
+            <audio id="background" src="sounds/background.mp3"></audio>
+            <audio id="destroyed" src="sounds/destroyed.mp3" preload="auto"></audio>
+        </a-assets>
+
+        <a-camera shooting="score: #textscore; sound: #laser" position="0 1.5 5">
             <a-cursor></a-cursor>
             <a-score-board id="scoreboard"></a-score-board>
         </a-camera>
-        <a-entity id="enemy" enemy="amount: 3"></a-entity>
-        <a-entity id="environment" environment></a-entity>
+        <a-entity id="enemy" enemy="sounddestroyed: #destroyed"></a-entity>
+        <a-entity id="environment" environment sound="src: #background; autoplay:true; positional: false; volume: .3; loop: true"></a-entity>
     </a-scene>
 </body>
 </html>

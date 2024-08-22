@@ -1,7 +1,8 @@
 AFRAME.registerComponent('shooting', {
     schema: {
         score: {type:'selector'},
-        total: {type:'number', default:3}
+        total: {type:'number', default:3},
+        sound: {type:'string'}
     },
     
     init: function(){
@@ -82,6 +83,12 @@ AFRAME.registerComponent('shooting', {
             dur: 500,
             easing: 'linear'
           });
+        bullet.setAttribute('sound',{
+            src: this.data.sound,
+            autoplay: true,
+            positional: false,
+            volume: .1
+        });
 
         return bullet;
     },

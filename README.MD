@@ -139,5 +139,11 @@ Atualiza o cenário conforme avança de nível.
 
 `feat: cenário`
 
+#### 22. Inserir sons
+
+Inserir sons no jogo.
+
+`feat: sons`
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
