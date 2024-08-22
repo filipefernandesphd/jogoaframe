@@ -151,5 +151,8 @@ Acréscimo do efeito de confete, ajuste da amplitudade da posição dos inimigos
 
 `feat: finalizacao`
 
+#### 24. Organização dos arquivos
+
+
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
