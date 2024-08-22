@@ -153,6 +153,10 @@ Acréscimo do efeito de confete, ajuste da amplitudade da posição dos inimigos
 
 #### 24. Organização dos arquivos
 
+Organização dos arquivos.
+
+`feat: organizacao dos arquivos`
+
 
 ## Desenvolvido por
 [Filipe Fernandes, PhD](https://filipefernandesphd.com/)
